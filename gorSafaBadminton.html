@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOR Safa Badminton - Sewa Lapangan Badminton Berkualitas</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://placehold.co/1920x1080') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            margin: 10px;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 15px auto 0;
+        }
+        
+        .facility-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            background: white;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .facility-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .price-table {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .price-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .locker-system {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .booking-list {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent-color);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-table-tennis-paddle-ball me-2"></i>GOR Safa Badminton
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fasilitas">Fasilitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#harga">Harga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lokasi">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#booking">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">GOR Safa Badminton</h1>
+            <p class="hero-subtitle">Lapangan Badminton Berkualitas dengan Fasilitas Terbaik</p>
+            <div>
+                <a href="#kontak" class="btn btn-primary-custom btn-lg">
+                    <i class="fas fa-phone-alt me-2"></i>Hubungi Kami
+                </a>
+                <a href="#lokasi" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-map-marker-alt me-2"></i>Lihat Lokasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Section -->
+    <section id="fasilitas" class="py-5">
+        <div class="container">
+            <br><br>
+            <h2 class="text-center section-title">Fasilitas Kami</h2>
+            
+            <div id="facilityCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#facilityCarousel" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1200x600" class="d-block w-100 rounded" alt="Lapangan badminton profesional dengan lantai kayu dan garis kuning biru yang jelas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x600" class="d-block w-100 rounded" alt="Area lobi yang nyaman dengan tempat duduk dan meja untuk istirahat">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x600" class="d-block w-100 rounded" alt="Fasilitas kamar mandi yang bersih dan modern">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x600" class="d-block w-100 rounded" alt="Area parkir yang luas dan aman untuk kendaraan pengunjung">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#facilityCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#facilityCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://placehold.co/600x400" class="facility-img" alt="Lapangan standar internasional dengan lantai kayu maple">
+                        <div class="p-4">
+                            <h3>Mushola</h3>
+                            <p>Tersedia mushola yang bersih dan nyaman, lengkap dengan perlengkapan ibadah untuk mendukung kenyamanan pengunjung.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://placehold.co/600x400" class="facility-img" alt="Penyewaan raket dan kok dengan berbagai merk terbaik">
+                        <div class="p-4">
+<h3>Toilet dan Ruang Ganti</h3>
+<p>Fasilitas toilet dan ruang ganti yang bersih, nyaman, dan lengkap, memastikan pengalaman pengunjung tetap menyenangkan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://placehold.co/600x400" class="facility-img" alt="Area loker pribadi dengan kunci pengaman">
+                        <div class="p-4">
+                            <h3>Kantin</h3>
+                            <p>Kantin nyaman yang menyediakan berbagai makanan dan minuman segar untuk menemani waktu istirahat Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harga Section -->
+    <section id="harga" class="py-5 bg-light">
+        <div class="container">
+                        <br><br>
+            <h2 class="text-center section-title">Daftar Harga</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="price-table">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Waktu</th>
+                                    <th>Weekday (Senin-Jumat)</th>
+                                    <th>Weekend (Sabtu-Minggu)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08:00 - 12:00</td>
+                                    <td>Rp 80.000/jam</td>
+                                    <td>Rp 100.000/jam</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00 - 17:00</td>
+                                    <td>Rp 100.000/jam</td>
+                                    <td>Rp 120.000/jam</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00 - 22:00</td>
+                                    <td>Rp 120.000/jam</td>
+                                    <td>Rp 150.000/jam</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loker Section -->
+    <section id="lokasi" class="py-5">
+        <div class="container">
+                        <br><br>
+            <h2 class="text-center section-title">Lokasi</h2>
+            
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="locker-system">
+                        <h4><i class="fas fa-map-marker-alt me-2"></i>Lokasi GOR Safa Badminton</h4>
+                        <p>Jl. Badminton No. 123, Kelurahan Sport, Kecamatan Ceria, Kota Sehat</p>
+                        <div class="ratio ratio-16x9 mt-3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.50488119789!2d107.03538690930672!3d-6.19692076068075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69893a48f38391%3A0xb8429ae7f87b77ac!2sKutoarjo%20Motor!5e0!3m2!1sid!2sid!4v1755795548411!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-5 bg-light">
+        <div class="container">
+                        <br><br>
+            <h2 class="text-center section-title">Daftar Booking</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="booking-list">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="bookingTable">
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Jam</th>
+                                        <th>Lapangan</th>
+                                        <th>Nama</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data akan diisi oleh JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="text-muted">Untuk booking lapangan, silakan hubungi nomor telepon kami:</p>
+                            <a href="tel:+6281234567890" class="btn btn-primary-custom">
+                                <i class="fas fa-phone-alt me-2"></i>Booking Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-5">
+        <div class="container">
+                        <br><br>
+            <h2 class="text-center section-title">Hubungi Kami</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Telepon</h3>
+                        <p>Kami siap melayani Anda setiap hari selama 24 jam</p>
+                        <div class="contact-numbers">
+                            <h4><a href="tel:+6281234567890">+62 812-3456-7890</a></h4>
+                            <h4><a href="tel:+6289876543210">+62 898-7654-3210</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Untuk booking cepat dan informasi lebih lanjut via WhatsApp:</p>
+                        <a href="https://wa.me/6281234567890" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp me-2"></i>Kirim Pesan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h3>GOR Safa Badminton</h3>
+            <p class="mb-4">Lapangan Badminton Yang Berkualitas</p>
+            
+            <div class="social-links mb-4">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <p class="small">&copy; 2025 GOR Safa Badminton. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Google Sheets API Integration -->
+    <script>
+        // Fungsi untuk mengambil data booking dari Google Sheets
+        async function fetchBookingData() {
+            try {
+                // Ganti dengan URL spreadsheet Anda yang dipublish ke web
+                const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vYourSheetIDHere/pub?output=csv';
+                
+                const response = await fetch(sheetUrl);
+                const csvData = await response.text();
+                
+                // Parse CSV data
+                const rows = csvData.split('\n');
+                const tableBody = document.querySelector('#bookingTable tbody');
+                
+                // Clear existing rows
+                tableBody.innerHTML = '';
+                
+                // Start from index 1 to skip header row
+                for (let i = 1; i < rows.length; i++) {
+                    if (rows[i].trim() === '') continue;
+                    
+                    const cols = rows[i].split(',');
+                    const row = document.createElement('tr');
+                    
+                    // Format sesuai struktur sheet Anda (tanggal, jam, lapangan, nama, status)
+                    row.innerHTML = `
+                        <td>${cols[0] || '-'}</td>
+                        <td>${cols[1] || '-'}</td>
+                        <td>${cols[2] || '-'}</td>
+                        <td>${cols[3] || '-'}</td>
+                        <td><span class="badge ${cols[4] === 'Confirmed' ? 'bg-success' : 'bg-warning text-dark'}">${cols[4] || 'Pending'}</span></td>
+                    `;
+                    
+                    tableBody.appendChild(row);
+                }
+            } catch (error) {
+                console.error('Error fetching booking data:', error);
+                document.querySelector('#bookingTable tbody').innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-danger">Gagal memuat data booking. Silakan refresh halaman atau hubungi admin.</td>
+                    </tr>
+                `;
+            }
+        }
+        
+        // Panggil fungsi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', fetchBookingData);
+    </script>
+</body>
+</html>
+
